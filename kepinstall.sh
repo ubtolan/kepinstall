@@ -83,7 +83,7 @@ done
 echo
 read -p "HTTPS 监听端口 (默认443): " SSL_PORT
 if [ -z "$SSL_PORT" ]; then
-    SSL_MODE=443
+    SSL_PORT=443
 fi
 
 #echo
