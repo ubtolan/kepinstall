@@ -74,7 +74,7 @@ read -p "绑定域名: " DOMAIN
 echo
 
 read -p "邻居Token: " CLIENT_TOKEN
-read -p "邻居URL: " CLIENT_URl
+read -p "邻居URL: " CLIENT_URL
 
 while [ ${#WEB_PASS} -lt 8 ]; do
     WEB_PASS="${WEB_PASS}0"
