@@ -142,7 +142,7 @@ openssl req -x509 -nodes \
 -days 3650 \
 -keyout ${Install_dir}/ca.key \
 -out ${Install_dir}/ca.crt \
--subj "/CN=$DOMAIN"
+-subj "/CN=localhost"
 
 fi
 
