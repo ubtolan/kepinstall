@@ -71,11 +71,6 @@ read -p "Web登录密码(至少8位): " WEB_PASS
 echo
 read -p "绑定域名: " DOMAIN
 
-echo
-
-read -p "邻居Token: " CLIENT_TOKEN
-read -p "邻居URL: " CLIENT_URL
-
 while [ ${#WEB_PASS} -lt 8 ]; do
     WEB_PASS="${WEB_PASS}0"
 done
@@ -116,9 +111,9 @@ cd "$Install_dir"
 
 echo "下载程序..."
 
-wget https://github.com/stalltrix/kep-cli/releases/download/v0.1.6/kep-cli-linux-amd64.zip
-wget https://github.com/stalltrix/kepweb/releases/download/v0.2.7/kepweb-linux-amd64.zip
-wget https://github.com/stalltrix/kep-demo/releases/download/v0.2.9/kep-demo-linux-amd64.zip
+wget https://github.com/stalltrix/kep-cli/releases/download/v0.1.9/kep-cli-linux-amd64.zip
+wget https://github.com/stalltrix/kepweb/releases/download/v0.2.9/kepweb-linux-amd64.zip
+wget https://github.com/stalltrix/kep-demo/releases/download/v0.3.1/kep-demo-linux-amd64.zip
 wget https://github.com/stalltrix/kep-archive/releases/download/v20260329/kep-data.tar.gz
 wget https://github.com/caddyserver/caddy/releases/download/v2.11.4/caddy_2.11.4_linux_amd64.tar.gz
 
@@ -184,13 +179,7 @@ cat > web.json <<EOF
 EOF
 
 cat > token.json <<EOF
-{
-    "$CLIENT_TOKEN": {
-        "url": "$CLIENT_URL",
-        "token": "$CLIENT_TOKEN",
-        "rpm": 300
-    }
-}
+{}
 EOF
 
 if [ "$SSL_MODE" = "2" ]; then
