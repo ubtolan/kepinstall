@@ -159,22 +159,23 @@ EOF
 
 cat > web.json <<EOF
 {
-    "mainkey": "mainkey.pub",
-    "pub_key": "pkey.pub",
-    "priv_key": "pkey.priv",
-    "sig_key": "pkey.sig",
-    "domain": "$DOMAIN",
-    "user": "$WEB_USER",
-    "login_token": "$WEB_PASS",
-    "api_token": "$API_TOKEN",
-    "listen": "127.0.0.1:13001",
-    "ntp": "time.cloudflare.com",
-    "neighbors": [
-        {
-            "url": "http://127.0.0.1:13000",
-            "token": "$LOCAL_TOKEN"
-        }
-    ]
+	"mainkey": "mainkey.pub",
+	"pub_key": "pkey.pub",
+	"priv_key": "pkey.priv",
+	"sig_key": "pkey.sig",
+	"domain": "$DOMAIN",
+	"meta_on": true,
+	"user": "$WEB_USER",
+	"login_token": "$WEB_PASS",
+	"api_token": "$API_TOKEN",
+	"listen": "127.0.0.1:13001",
+	"ntp": "time.cloudflare.com",
+	"neighbors": [
+		{
+			"url": "http://127.0.0.1:13000",
+			"token": "$LOCAL_TOKEN"
+		}
+	]
 }
 EOF
 
